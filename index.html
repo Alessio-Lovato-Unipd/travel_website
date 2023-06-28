@@ -19,53 +19,19 @@
 
 </head>
 <body>
-	<div class="container">
+	<div class="container" id="main_page">
 		<div class="sidebar">
 		  <img class="logo" src="logo.png" alt="Logo">
 		</div>
 		<div class="content">
 		  <h1 class="title">Titolo</h1>
 		  <h2 class="subtitle">Vuoi cominciare il test per trovare il tuo viaggio ideale?</h2>
-		  <a class="start_button" onclick="start_quiz()">Inizia il test</a>
+		  <button class="start_button" onclick="location.href='quiz_page.html'">Inizia il test</button>
 		</div>
 		<div class="sidebar">
 		  <img class="logo" src="logo.png" alt="Logo">
 		</div>
-	  </div>
+	</div>
 
 </body>
-
-	<script>
-		function showQuestion(questionNumber) {
-			var currentQuestion = document.getElementById('question' + (questionNumber - 1));
-			currentQuestion.classList.remove('visible');
-	
-			var nextQuestion = document.getElementById('question' + questionNumber);
-			nextQuestion.classList.add('visible');
-			loading_question();
-		}
-	
-		function showResult() {
-			var q1Answer = document.querySelector('input[name="q1"]:checked').value;
-			var q2Answer = document.querySelector('input[name="q2"]:checked').value;
-			var q3Answer = document.querySelector('input[name="q3"]:checked').value;
-	
-			var resultText = document.getElementById('result-text');
-			if (q1Answer === 'beach' && q2Answer === 'car' && q3Answer === 'summer') {
-				resultText.textContent = 'Your optimal travel destination is a beach getaway!';
-			} else if (q1Answer === 'mountain' && q2Answer === 'plane' && q3Answer === 'winter') {
-				resultText.textContent = 'Your optimal travel destination is a winter mountain retreat!';
-			} else if (q1Answer === 'city' && q2Answer === 'train' && q3Answer === 'spring') {
-				resultText.textContent = 'Your optimal travel destination is a vibrant city exploration!';
-			} else {
-				resultText.textContent = 'Based on your answers, we recommend a customized travel experience!';
-			}
-	
-			var currentQuestion = document.getElementById('question3');
-			currentQuestion.classList.remove('visible');
-	
-			var result = document.getElementById('result');
-			result.classList.add('visible');
-		}
-	</script>
 	
