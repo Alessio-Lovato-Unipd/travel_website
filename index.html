@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Travel Quiz</title>
+    <style>
+        body {
+            background-image: url('background.jpg');
+            background-size: cover;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+
+        .quiz-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+        }
+
+        .question {
+            display: none;
+        }
+
+        .question.visible {
+            display: block;
+        }
+
+        .options label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .submit-btn {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <div id="question1" class="question visible">
+            <h3>Question 1:</h3>
+            <p>What type of vacation do you prefer?</p>
+            <div class="options">
+                <label>
+                    <input type="radio" name="q1" value="beach"> Beach
+                </label>
+                <label>
+                    <input type="radio" name="q1" value="mountain"> Mountain
+                </label>
+                <label>
+                    <input type="radio" name="q1" value="city"> City
+                </label>
+            </div>
+            <button onclick="showQuestion(2)">Next</button>
+        </div>
+
+        <div id="question2" class="question">
+            <h3>Question 2:</h3>
+            <p>What is your preferred mode of transportation?</p>
+            <div class="options">
+                <label>
+                    <input type="radio" name="q2" value="car"> Car
+                </label>
+                <label>
+                    <input type="radio" name="q2" value="plane"> Plane
+                </label>
+                <label>
+                    <input type="radio" name="q2" value="train"> Train
+                </label>
+            </div>
+            <button onclick="showQuestion(3)">Next</button>
+        </div>
+
+        <div id="question3" class="question">
+            <h3>Question 3:</h3>
+            <p>Which season do you prefer for traveling?</p>
+            <div class="options">
+                <label>
+                    <input type="radio" name="q3" value="spring"> Spring
+                </label>
+                <label>
+                    <input type="radio" name="q3" value="summer"> Summer
+                </label>
+                <label>
+                    <input type="radio" name="q3" value="autumn"> Autumn
+                </label>
+                <label>
+                    <input type="radio" name="q3" value="winter"> Winter
+                </label>
+            </div>
+            <button onclick="showResult()">Submit</button>
+        </div>
+
+        <div id="result" class="question">
+            <h3>Result:</h3>
+            <p id="result-text"></p>
+        </div>
+    </div>
+
+    <script>
+        function showQuestion(questionNumber) {
+            var currentQuestion = document.getElementById('question' + (questionNumber - 1));
+            currentQuestion.classList.remove('visible');
+    
+            var nextQuestion = document.getElementById('question' + questionNumber);
+            nextQuestion.classList.add('visible');
+        }
+    
+        function showResult() {
+            var q1Answer = document.querySelector('input[name="q1"]:checked').value;
+            var q2Answer = document.querySelector('input[name="q2"]:checked').value;
+            var q3Answer = document.querySelector('input[name="q3"]:checked').value;
+    
+            var resultText = document.getElementById('result-text');
+            if (q1Answer === 'beach' && q2Answer === 'car' && q3Answer === 'summer') {
+                resultText.textContent = 'Your optimal travel destination is a beach getaway!';
+            } else if (q1Answer === 'mountain' && q2Answer === 'plane' && q3Answer === 'winter') {
+                resultText.textContent = 'Your optimal travel destination is a winter mountain retreat!';
+            } else if (q1Answer === 'city' && q2Answer === 'train' && q3Answer === 'spring') {
+                resultText.textContent = 'Your optimal travel destination is a vibrant city exploration!';
+            } else {
+                resultText.textContent = 'Based on your answers, we recommend a customized travel experience!';
+            }
+    
+            var currentQuestion = document.getElementById('question3');
+            currentQuestion.classList.remove('visible');
+    
+            var result = document.getElementById('result');
+            result.classList.add('visible');
+        }
+    </script>
+    
