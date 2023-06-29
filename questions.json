@@ -1,0 +1,63 @@
+{
+    "questions": [
+      {
+        "id": 1,
+        "text": "Che tipo di vacanza preferisci?",
+        "options": [
+          {
+            "value": 1,
+            "label": "Spiaggia"
+          },
+          {
+            "value": 2,
+            "label": "Montagna"
+          },
+          {
+            "value": 3,
+            "label": "Città"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Qual è il tuo mezzo di trasporto preferito?",
+        "options": [
+          {
+            "value": 1,
+            "label": "Auto"
+          },
+          {
+            "value": 2,
+            "label": "Aereo"
+          },
+          {
+            "value": 3,
+            "label": "Treno"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "text": "Quale stagione preferisci per viaggiare?",
+        "options": [
+          {
+            "value": 1,
+            "label": "Primavera"
+          },
+          {
+            "value": 2,
+            "label": "Estate"
+          },
+          {
+            "value": 3,
+            "label": "Autunno"
+          },
+          {
+            "value": 4,
+            "label": "Inverno"
+          }
+        ]
+      }
+    ]
+  }
+  

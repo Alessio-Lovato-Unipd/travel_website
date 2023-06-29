@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<html lang="it">
+<head>
+	<title>Find the perfect travel</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+	<!-- CSS -->
+	<link rel="stylesheet" href="questions.css" />
+	
+	<!-- Fonts -->
+
+	<!-- Script -->
+	<script src="page_manager.js"></script>
+	
+
+</head>
+<body onload="start_quiz()">
+
+	<div id="question" class="quiz-container">
+			<h3 id="question_number"></h3>
+			<p id="question_text">What type of vacation do you prefer?</p>
+			<div class="options">
+				<label>
+					<input type="radio" name="q1" value="beach" id="answer1"> Beach
+				</label>
+					<label>
+					<input type="radio" name="q1" value="mountain" id="answer2"> Mountain
+				</label>
+				<label>
+					<input type="radio" name="q1" value="city" id="answer3"> City
+					</label>
+			</div>
+			<button id="next_button" onclick="next_question()">Next</button>
+		</div>
+
+
+</body>
+
+	<script>
+		function showQuestion(questionNumber) {
+			var currentQuestion = document.getElementById('question' + (questionNumber - 1));
+			currentQuestion.classList.remove('visible');
+	
+			var nextQuestion = document.getElementById('question' + questionNumber);
+			nextQuestion.classList.add('visible');
+			loading_question();
+		}
+	
+		function showResult() {
+			var q1Answer = document.querySelector('input[name="q1"]:checked').value;
+			var q2Answer = document.querySelector('input[name="q2"]:checked').value;
+			var q3Answer = document.querySelector('input[name="q3"]:checked').value;
+	
+			var resultText = document.getElementById('result-text');
+			if (q1Answer === 'beach' && q2Answer === 'car' && q3Answer === 'summer') {
+				resultText.textContent = 'Your optimal travel destination is a beach getaway!';
+			} else if (q1Answer === 'mountain' && q2Answer === 'plane' && q3Answer === 'winter') {
+				resultText.textContent = 'Your optimal travel destination is a winter mountain retreat!';
+			} else if (q1Answer === 'city' && q2Answer === 'train' && q3Answer === 'spring') {
+				resultText.textContent = 'Your optimal travel destination is a vibrant city exploration!';
+			} else {
+				resultText.textContent = 'Based on your answers, we recommend a customized travel experience!';
+			}
+	
+			var currentQuestion = document.getElementById('question3');
+			currentQuestion.classList.remove('visible');
+	
+			var result = document.getElementById('result');
+			result.classList.add('visible');
+		}
+	</script>
+	
