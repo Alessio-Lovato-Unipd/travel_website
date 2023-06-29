@@ -1,23 +1,56 @@
-function start_quiz() {
+/* Get the number of maximum destination to create the array
+*/
+function num_of_destinations() {
+	return fetch('questions.json')
+	  .then(response => response.json())
+	  .then(jsonData => {
+		let maxValue = 0;
+		
+		jsonData.questions.forEach(question => {
+		  question.options.forEach(option => {
+			if (option.value > maxValue) {
+			  maxValue = option.value;
+			}
+		  });
+		});
+		
+		return maxValue;
+	  })
+	  .catch(error => {
+		console.log('Error:', error);
+		return 0;
+	  });
+  }
+  
+  function start_quiz() {
 	/* The elements of the array 'data' represents in order:
 		- number of answered question
-		- number of questiond given for destination 1
-		- number of questiond given for destination 2
-		- number of questiond given for destination 3
-		- number of questiond given for destination 4
-		- number of questiond given for destination 5
+		- number of answers given for destination 1
+		- number of answers given for destination 2
+		- number of answers given for destination 3
+		- number of answers given for destination 4
+		- number of answers given for destination 5
+		.
+		.
+		.
 	*/
-	var data = [0,0,0,0,0];
+	data = [0];
 
-	// Convert the array to a JSON string
-	var arrayString = JSON.stringify(data);
-
-	// Save the JSON string to sessionStorage with a specific key
-	sessionStorage.setItem('fitted_travel_data', arrayString);
+	num_of_destinations()
+	.then(num => {
 	
-	//Set parameters for the new question
-	load_question();
-}
+		//creation of the array to save answers
+		for (let i = 1; i <= num; i++) {
+			data.push(0);
+		}
+		
+		// Save the JSON string to sessionStorage with a specific key
+		sessionStorage.setItem('fitted_travel_data', JSON.stringify(data));
+	
+		//Set parameters for the new question
+		load_question();
+  	})
+}  
 
 function load_question() {
 
@@ -25,11 +58,11 @@ function load_question() {
 	number = get_question_number() + 1;
 
 	//Get questions elements
-		getQuestionData(number)
-		.then(questionData => {
-			if (questionData) {
+		getanswersata(number)
+		.then(answersata => {
+			if (answersata) {
 				//Set new question parameters
-				set_new_parameters(questionData);
+				set_new_parameters(answersata);
 
 			} else {
 				console.log("Question not found");
@@ -43,7 +76,7 @@ function load_question() {
 			document.getElementById("next_button").textContent = "Invia risposte";
 }
 
-async function getQuestionData(questionId) {
+async function getanswersata(questionId) {
 	try {
 	  // Fetch the JSON data from the external file
 	  const response = await fetch('questions.json');
@@ -70,24 +103,24 @@ async function getQuestionData(questionId) {
 	}
   }
 
-  function set_new_parameters(questionData) {
+  function set_new_parameters(answersata) {
 	const questionNumberElement = document.getElementById('question_number');
 	const questionTextElement = document.getElementById('question_text');
 	const optionsContainer = document.querySelector('.options');
   
-	questionNumberElement.textContent = `Domanda ${questionData.id}:`;
-	questionTextElement.textContent = questionData.text;
+	questionNumberElement.textContent = `Domanda ${answersata.id}:`;
+	questionTextElement.textContent = answersata.text;
   
 	// Clear existing options
 	optionsContainer.innerHTML = '';
   
-	questionData.options.forEach((option, index) => {
+	answersata.options.forEach((option, index) => {
 	  const label = document.createElement('label');
 	  const input = document.createElement('input');
 	  const labelText = document.createTextNode(option.label);
   
 	  input.type = 'radio';
-	  input.name = `q${questionData.id}`;
+	  input.name = `q${answersata.id}`;
 	  input.value = option.value;
 	  input.id = `answer${index + 1}`;
   
