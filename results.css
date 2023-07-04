@@ -9,14 +9,13 @@ body {
   }
   
   .result {
-    margin-top: 10vh;
     position: absolute;
-    top: 100%;
+    top: 120%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: fit-content;
     height: fit-content;
-    background-color: rgba(255, 255, 255, 0.85);
+    background-color: rgba(255, 255, 255, 0.75);
     border-radius: 10px;
     padding: 0;
     text-align: center;
