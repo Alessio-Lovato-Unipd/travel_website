@@ -14,7 +14,7 @@ body {
   max-width: 80vh;
   max-height: 70vh;
   margin: 0;
-  padding: 10%;
+  padding: 5%;
   background-color: rgba(255, 70, 87, 0.7);
   border-radius: 15%;
   text-align: center;
@@ -35,16 +35,17 @@ body {
 }
 
 #next_button {
-    margin-top: 5vh;
-    height: fit-content;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 10%;
     background-color: rgba(241, 229, 229, 1);
     border: none;
-    padding: 3%;
-    padding-left: 8%;
-    padding-right: 8%;
+    width: fit-content;
+    margin-top: 2vh;
+    height: fit-content;
+    border-radius: 10%;
+    margin-bottom: 2vh;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: 'Nunito', sans-serif;
     font-size: 3vh;
 }
 
