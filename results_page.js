@@ -1,6 +1,5 @@
 
 function loadResultPage(){
-	showList();
 	//Fetch destinations
 	fetchJSON('destinations.json')
 	.then(resultMap => {
@@ -9,7 +8,7 @@ function loadResultPage(){
 			answers = getArrayFromURL(currentURL);
 			//Create map that associate answer with personality
 			const destinationMap = generateDestinationMap(answers);
-			console.log(answers);
+
 			// Find the key with the highest value in resultMap
 			const maxKey = findMaxValueKey(destinationMap);
 
@@ -19,12 +18,13 @@ function loadResultPage(){
 			// Set the text to the HTML element with id "text-placeholder"
 			document.getElementById("text-placeholder").textContent = maxText;
 			document.getElementById("title").textContent = maxKey;
-			document.body.style.backgroundImage = url(maxKey + ".jpg");
+			var body = document.getElementsByTagName('body')[0];
+			body.style.backgroundImage = 'url(' + maxKey + '.jpg)';
 			// Create graph
 			generateRadarChart(destinationMap);
 
 			//Show list with answers
-			showList();
+			showList(answers);
 
 		}
 		})
@@ -66,7 +66,7 @@ async function fetchJSON(url) {
   }
 
 
-function showList() {
+function showList(selectedAnswers) {
 	// Get the results list element
 	const resultsList = document.getElementById("results-list");
 
@@ -77,7 +77,6 @@ function showList() {
 	fetch('questions.json')
 	.then(response => response.json())
 	.then(jsonData => {
-		const selectedAnswers = download_answers_from_Sessionstorage();
 
 		// Populate the results list with selected answers
 		jsonData.questions.forEach(question => {
@@ -161,7 +160,6 @@ function showList() {
 	// Extract the labels (keys) and data (values) from the destination map
 	const labels = Array.from(destinationMap.keys());
 	const data = Array.from(destinationMap.values());
-	console.log(destinationMap);
   
 // Create the radar chart using Chart.js
 const maxDataValue = Math.ceil(Math.max(...data));
