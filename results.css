@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(Messico.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+  }
+  
+  .result {
+    margin-top: 10vh;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: fit-content;
+    height: fit-content;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 10px;
+    padding: 0;
+    text-align: center;
+    align-items: center;
+  }
+  
+  .background {
+    height: 100vh;
+  }
+  
+  h1 {
+    font-size: 8vh;
+    color: rgba(255, 70, 87);
+    font-family: 'Nunito', sans-serif;
+  }
+  
+  p {
+    font-size: 3vh;;
+    margin-left: 5%;
+    margin-right: 5%;
+    white-space: pre-wrap;
+    font-family: 'Nunito', sans-serif;
+  }
+
+ 
+#results-list {
+  list-style-type: none;
+  padding: 0;
+  max-height: 45vh;
+  overflow-y: auto;
+  font-family: 'Nunito', sans-serif;
+}
+
+#results-list li {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#results-list li:last-child {
+  margin-bottom: 0;
+}
+
+#results-list .question {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#results-list .options {
+  padding: 0;
+}
+
+#results-list .option {
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+}
+
+#results-list .option label {
+  font-size: 14px; /* Imposta la dimensione del testo delle opzioni */
+}
+
+#results-list .option input[type="radio"] {
+  margin-right: 5px;
+}
+
+#results-list .option input[type="radio"] + label {
+  font-size: 12px; /* Imposta la dimensione del testo delle etichette delle opzioni */
+}
+
+#radarChart{
+  max-height: 35vh;
+  margin-bottom: 0;
+}
+
+#Button {
+  background-color: rgba(255, 70, 87, 0.7);
+  border: none;
+  width: fit-content;
+  margin-top: 2vh;
+  height: 8vh;
+  border-radius: 10%;
+  margin-bottom: 2vh;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: 'Nunito', sans-serif;
+}
