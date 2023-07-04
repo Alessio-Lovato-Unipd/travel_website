@@ -13,25 +13,42 @@
 	<link rel="stylesheet" href="page_style.css" />
     
     <!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&family=Roboto:wght@500&display=swap" rel="stylesheet">
 
     <!-- Script -->
 	<script src="page_manager.js"></script>
 
 </head>
 <body>
-	<div class="container" id="main_page">
-		<div class="sidebar">
-		  <img class="logo" src="logo.png" alt="Logo">
+	<div>
+		<img id="banner_superiore" src="banner_superiore.png">
+	</div>
+	<div>
+		<img id="image" src="background_3.jpg" alt="background image">
+	</div>
+	<div id="banner-titolo">
+		<h1>...e tu, che destinazione sei?</h1>
+	</div>
+		<div id="banner-testo">
+			<h2>Scopri che destinazione sei in base alla tua personalità!</h2>
+			<h4>Compila il seguente questionario e saprai quale destinazione è più adatta alla tua personalità. Al resto ci pensiamo noi!</h4>
+			<div id="p1">
+				<p>Ogni persona può essere descritta come un luogo perché ha caratteristiche, tratti distintivi e una personalità unica che la contraddistingue.</p>
+				<p>Come le persone, i luoghi hanno una storia e una cultura che li definiscono. Hanno un passato che li ha plasmati nel corso del tempo e un insieme di tradizioni, usanze e valori che li distinguono. Questi elementi influenzano l'identità del luogo, come gli influenti e gli eventi influenzano la personalità di una persona.</p>
+				<p>Si può provare un senso di tranquillità e serenità in un ambiente naturale, come una foresta o una spiaggia, o un senso di eccitazione e stimolazione in un centro urbano vivace. Allo stesso modo, le persone possono suscitare reazioni emotive, che vanno dalla gioia all'ammirazione, dalla calma alla felicità.</p>
+			</div>
+			
 		</div>
-		<div class="content">
-		  <h1 class="title">Titolo</h1>
-		  <h2 class="subtitle">Vuoi cominciare il test per trovare il tuo viaggio ideale?</h2>
-		  <button class="start_button" onclick="location.href='quiz_page.html'">Inizia il test</button>
+		<div id="button_div">
+			<button class="button" onclick="document.location.href='quiz_page.html'">INIZIA IL TEST</button>
 		</div>
-		<div class="sidebar">
-		  <img class="logo" src="logo.png" alt="Logo">
+		<div>
+			<img id="banner_inferiore" src="banner_inferiore.png">
 		</div>
 	</div>
+	
 
-</body>
+  </body>
 	

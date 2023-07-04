@@ -1,63 +1,112 @@
 {
-    "questions": [
-      {
-        "id": 1,
-        "text": "Che tipo di vacanza preferisci?",
-        "options": [
-          {
-            "value": 1,
-            "label": "Spiaggia"
-          },
-          {
-            "value": 2,
-            "label": "Montagna"
-          },
-          {
-            "value": 3,
-            "label": "Città"
-          }
-        ]
-      },
-      {
-        "id": 2,
-        "text": "Qual è il tuo mezzo di trasporto preferito?",
-        "options": [
-          {
-            "value": 1,
-            "label": "Auto"
-          },
-          {
-            "value": 2,
-            "label": "Aereo"
-          },
-          {
-            "value": 3,
-            "label": "Treno"
-          }
-        ]
-      },
-      {
-        "id": 3,
-        "text": "Quale stagione preferisci per viaggiare?",
-        "options": [
-          {
-            "value": 1,
-            "label": "Primavera"
-          },
-          {
-            "value": 2,
-            "label": "Estate"
-          },
-          {
-            "value": 3,
-            "label": "Autunno"
-          },
-          {
-            "value": 4,
-            "label": "Inverno"
-          }
-        ]
-      }
-    ]
-  }
-  
+  "questions": [
+    {
+      "id": 1,
+      "text": "Ti reputi una persona:",
+      "options": [
+        {
+          "value": 1,
+          "label": "Avventurosa"
+        },
+        {
+          "value": 2,
+          "label": "Socievole"
+        },
+        {
+          "value": 3,
+          "label": "Introversa"
+        },
+        {
+          "value": 4,
+          "label": "Organizzata"
+        },
+        {
+          "value": 5,
+          "label": "Tranquilla"
+        },
+        {
+          "value": 6,
+          "label": "Sportiva"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "text": "Quale colore ti descrive meglio?",
+      "options": [
+        {
+          "value": 1,
+          "label": "Rosso"
+        },
+        {
+          "value": 2,
+          "label": "Blu"
+        },
+        {
+          "value": 3,
+          "label": "Bianco"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "text": "Con quale personaggio delle serie TV trascorreresti le vacanze?",
+      "options": [
+        {
+          "value": 1,
+          "label": "Mercoledì Addams (Mercoledì)"
+        },
+        {
+          "value": 2,
+          "label": "Bjorn La Corazza (Vikings)"
+        },
+        {
+          "value": 3,
+          "label": "Emily (Emily in Paris)"
+        },
+        {
+          "value": 4,
+          "label": "John B. (Outer Banks)"
+        },
+        {
+          "value": 5,
+          "label": "Barney Stinson (How I met your mother)"
+        },
+        {
+          "value": 6,
+          "label": "Tokyo (La casa di carta)"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "text": "Se fossi un elemento naturale, quale saresti?",
+      "options": [
+        {
+          "value": 1,
+          "label": "Acqua"
+        },
+        {
+          "value": 2,
+          "label": "Terra"
+        },
+        {
+          "value": 3,
+          "label": "Ghiaccio"
+        },
+        {
+          "value": 4,
+          "label": "Fuoco"
+        },
+        {
+          "value": 5,
+          "label": "Roccia"
+        },
+        {
+          "value": 6,
+          "label": "Aria"
+        }
+      ]
+    }
+  ]
+}
