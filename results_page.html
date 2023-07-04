@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<html lang="it">
+<head>
+	<title>Trova il viaggio perfetto per te - Risultati</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+	<!-- CSS -->
+	<link rel="stylesheet" href="results.css" />
+	
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&family=Roboto:wght@500&display=swap" rel="stylesheet">
+
+
+	<!-- Script -->
+	<script src="page_manager.js"></script>
+	<script src="results_page.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+</head>
+<body onload="loadResultPage()">
+	<div class="background">
+		<div class="result">
+			<h1 id="title">Ecco il tuo viaggio ideale</h1>
+			<p id="text-placeholder">Testo generico</p>
+			<canvas id="radarChart"></canvas>
+			<h3>Risposte:</h3>
+			<div>
+				<ul id="results-list"></ul>
+			</div>
+			<button id="Button" onclick="BackToOrigin()">Torna all'inizio</button>
+		</div>
+	</div>
+</body>
+</html>
