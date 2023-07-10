@@ -100,7 +100,6 @@ p {
   width: 15vw;
   height: 5vw;
   margin-top: 20px;
-  height: 8vh;
   border-radius: 2.5vw;
   margin-bottom: 20px;
   text-decoration: underline;
@@ -118,6 +117,22 @@ p {
     transform: none;
     width: 90%;
     margin: 20px auto;
+  }
+
+  #Button {
+    background-color: rgba(255, 70, 87, 0.8);
+    color: white;
+    border: none;
+    width: 30vw;
+    height: 10vw;
+    margin-top: 20px;
+    border-radius: 5vw;
+    margin-bottom: 20px;
+    text-decoration: underline;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: 'Nunito', sans-serif;
+    font-size: 4vw;
   }
 }
 
