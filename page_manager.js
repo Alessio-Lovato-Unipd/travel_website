@@ -16,7 +16,6 @@ function load_question() {
 	//Get questions elements
 		getanswerData(number)
 		.then(answerData => {
-			console.log(answerData);
 			if (answerData) {
 				//Set new question parameters
 				set_new_parameters(answerData);
