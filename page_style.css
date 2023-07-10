@@ -28,6 +28,7 @@ body {
 }
 
 #banner-testo{
+  display: inline;
   background-color: white;
   width: fit-content;
   height: fit-content;
@@ -49,17 +50,19 @@ h2 {
   font-size: 2.6vw;
   font-weight: 100;
   letter-spacing: 0.1vw;
-  margin-left: 13vw;
+  margin-top: 2vh;
+  margin-bottom: 0.5vh; /* Add this line */
 }
 
 h4 {
   color: rgba(0, 0, 0, 0.75);
   font-size: 1.3vw;
   font-weight: 100;
-  max-width: 73vw;
-  margin-left: 12vw;
-  margin-bottom: 2.5vh;
-  margin-top: -2vh;
+  margin-top: 0; /* Update this line */
+  margin-bottom: 2vh;
+  max-width: 70vw; /* Add this line */
+  margin-left: auto; /* Add this line */
+  margin-right: auto; /* Add this line */
 }
 
 p {
@@ -67,7 +70,7 @@ p {
   font-size: 1.3vw;
   text-align: justify;
   width: 70vw; /* Imposta una larghezza fissa */
-  margin-top: 2vh;
+  margin-top: 2vw;
   margin-left: 14vw;
   right: 0vw;
 }
