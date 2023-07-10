@@ -304,7 +304,43 @@ function generateDestinationMap(answers) {
 		case "Giappone":
 			openInNewTab("https://www.weroad.it/viaggi/giappone");
 	}
-  }
+
+	// Create the overlay div
+	var overlay = document.createElement("div");
+	overlay.classList.add("overlay");
   
+	// Create the question text
+	var question = document.createElement("p");
+	question.textContent = "Tornare alla pagina iniziale?";
   
+	// Create the button container
+	var buttonContainer = document.createElement("div");
+	buttonContainer.classList.add("button-container");
   
+	// Create the button for "yes"
+	var yesButton = document.createElement("button");
+	yesButton.textContent = "Si";
+	yesButton.classList.add("yes-button");
+	yesButton.addEventListener("click", function() {
+	  // Redirect to a new page
+	  document.location.href = "index.html";
+	});
+  
+	// Create the button for "no"
+	var noButton = document.createElement("button");
+	noButton.textContent = "No";
+	noButton.classList.add("no-button");
+	noButton.addEventListener("click", function() {
+	  // Remove the overlay
+	  overlay.remove();
+	});
+  
+	// Append elements to the overlay div
+	overlay.appendChild(question);
+	buttonContainer.appendChild(yesButton);
+	buttonContainer.appendChild(noButton);
+	overlay.appendChild(buttonContainer);
+  
+	// Append the overlay to the document body
+	document.body.appendChild(overlay);
+}
