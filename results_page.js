@@ -284,9 +284,26 @@ function generateDestinationMap(answers) {
   
 	return maxKey;
   }
-  
+
+  function openInNewTab(href) {
+	Object.assign(document.createElement('a'), {
+	  target: '_blank',
+	  rel: 'noopener noreferrer',
+	  href: href,
+	}).click();
+  }
+
   function BackToOrigin() {
-	document.location.href = "index.html";
+	switch (document.getElementById("title").textContent){
+		case "Norvegia":
+			openInNewTab("https://www.weroad.it/viaggi/tour-norvegia-lofoten");
+			break;
+		case "Messico":
+			openInNewTab("https://www.weroad.it/viaggi/il-messico-dei-maya");
+			break;
+		case "Giappone":
+			openInNewTab("https://www.weroad.it/viaggi/giappone");
+	}
   }
   
   
