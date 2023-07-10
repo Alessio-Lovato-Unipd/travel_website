@@ -1,46 +1,45 @@
 body {
-    margin: 0;
-    padding: 0;
-    background-image: url();
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-  }
-  
-  .result {
-    position: absolute;
-    top: 120%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: fit-content;
-    height: fit-content;
-    background-color: rgba(255, 255, 255, 0.75);
-    border-radius: 10px;
-    padding: 0;
-    text-align: center;
-    align-items: center;
-  }
-  
-  .background {
-    height: 100vh;
-  }
-  
-  h1 {
-    font-size: 8vh;
-    color: rgba(255, 70, 87);
-    font-family: 'Nunito', sans-serif;
-  }
-  
-  p {
-    font-size: 3vh;;
-    margin-left: 5%;
-    margin-right: 5%;
-    white-space: pre-wrap;
-    font-family: 'Nunito', sans-serif;
-  }
+  margin: 0;
+  padding: 0;
+  background-image: url();
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
 
- 
+.result {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  width: fit-content;
+  height: fit-content;
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  align-items: center;
+}
+
+.background {
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 8vh;
+  color: rgba(255, 70, 87);
+  font-family: 'Nunito', sans-serif;
+  margin-top: 30px;
+}
+
+p {
+  font-size: 3vh;
+  margin: 20px 5%;
+  white-space: pre-wrap;
+  font-family: 'Nunito', sans-serif;
+}
+
 #results-list {
   list-style-type: none;
   padding: 0;
@@ -78,7 +77,7 @@ body {
 }
 
 #results-list .option label {
-  font-size: 14px; /* Imposta la dimensione del testo delle opzioni */
+  font-size: 14px;
 }
 
 #results-list .option input[type="radio"] {
@@ -86,10 +85,10 @@ body {
 }
 
 #results-list .option input[type="radio"] + label {
-  font-size: 12px; /* Imposta la dimensione del testo delle etichette delle opzioni */
+  font-size: 12px;
 }
 
-#radarChart{
+#radarChart {
   max-height: 35vh;
   margin-bottom: 0;
 }
@@ -98,12 +97,23 @@ body {
   background-color: rgba(255, 70, 87, 0.7);
   border: none;
   width: fit-content;
-  margin-top: 2vh;
+  margin-top: 20px;
   height: 8vh;
   border-radius: 10%;
-  margin-bottom: 2vh;
+  margin-bottom: 20px;
   text-decoration: none;
   font-weight: bold;
   cursor: pointer;
   font-family: 'Nunito', sans-serif;
+}
+
+@media (max-width: 600px) {
+  .result {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: 90%;
+    margin: 20px auto;
+  }
 }
