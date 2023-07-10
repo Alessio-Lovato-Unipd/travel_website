@@ -94,17 +94,20 @@ p {
 }
 
 #Button {
-  background-color: rgba(255, 70, 87, 0.7);
+  background-color: rgba(255, 70, 87, 0.8);
+  color: white;
   border: none;
-  width: fit-content;
+  width: 15vw;
+  height: 5vw;
   margin-top: 20px;
   height: 8vh;
-  border-radius: 10%;
+  border-radius: 2.5vw;
   margin-bottom: 20px;
-  text-decoration: none;
+  text-decoration: underline;
   font-weight: bold;
   cursor: pointer;
   font-family: 'Nunito', sans-serif;
+  font-size: 1.5vw;
 }
 
 @media (max-width: 600px) {
