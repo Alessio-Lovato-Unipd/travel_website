@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
 }
 
 #image{
@@ -67,12 +68,11 @@ h4 {
 
 p {
   color: rgba(0, 0, 0, 0.55);
-  font-size: 1.3vw;
-  text-align: justify;
-  width: 70vw; /* Imposta una larghezza fissa */
-  margin-top: 2vw;
-  margin-left: 14vw;
-  right: 0vw;
+  font-size: 1.28vw;
+  text-align: left;
+  width: 70vw;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
@@ -82,12 +82,13 @@ p {
   color: white;
   border: none;
   margin-top: 1vh;
-  width: fit-content;
-  padding: 1%;
-  border-radius: 10px;
-  height: fit-content;
+  width: 16vw;
+  height: 5vw;
+  padding: 0%;
+  border-radius: 2.5vw;
   cursor: pointer;
-  font-size: 2vw;
+  font-size: 1.5vw;
+  text-decoration: underline;
   font-weight: bold;
   margin-bottom: 3vh;
 }
@@ -112,4 +113,51 @@ p {
   width: 100vw;
   background-size: 100%; /* Scalare l'immagine al 90% della dimensione originale */
   background-position: center;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  p {
+    font-size: 14px; /* Adjust the font size as needed for readability */
+  }
+
+  h2 {
+    font-size: 24px; /* Adjust the font size as needed for readability */
+  }
+
+  h4 {
+    font-size: 14px; /* Adjust the font size as needed for readability */
+  }
+
+  .button {
+    height: 35px;
+    width: 150px;
+    padding: 0%;
+    border-radius: 17px;
+    font-size: 18px; /* Adjust the font size as needed for readability */
+  }
+
+}
+
+/* Media query for even smaller screens */
+@media (max-width: 480px) {
+  p {
+    font-size: 12px; /* Adjust the font size as needed for readability */
+  }
+  
+  h2 {
+    font-size: 20px; /* Adjust the font size as needed for readability */
+  }
+
+  h4 {
+    font-size: 12px; /* Adjust the font size as needed for readability */
+  }
+
+  .button {
+    height: 35px;
+    width: 150px;
+    padding: 0%;
+    border-radius: 17px;
+    font-size: 16px; /* Adjust the font size as needed for readability */
+  }
 }
